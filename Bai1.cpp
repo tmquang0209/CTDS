@@ -12,8 +12,8 @@ int findGCD(int num1, int num2);
 int main()
 {
     int num1, num2, gcd;
-    num1 = 128;
-    num2 = 96;
+    num1 = 18;
+    num2 = 40;
     // cout << "Enter two numbers: ";
     // cin >> num1 >> num2;
     gcd = findGCD(num1, num2);
