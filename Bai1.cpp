@@ -12,8 +12,8 @@ int findGCD(int num1, int num2);
 int main()
 {
     int num1, num2, gcd;
-    num1 = 18;
-    num2 = 40;
+    num1 = 5;
+    num2 = 17;
     // cout << "Enter two numbers: ";
     // cin >> num1 >> num2;
     gcd = findGCD(num1, num2);
@@ -29,7 +29,6 @@ int findGCD(int num1, int num2)
         r = num1 % num2;
         num1 = num2;
         num2 = r;
-        // cout << num1 << "\t" << num2 << "\t" << r << endl;
     }
     return num1;
 }

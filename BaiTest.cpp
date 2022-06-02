@@ -1,32 +1,30 @@
 #include <iostream>
-
 using namespace std;
-
-int findGCD(int num1, int num2)
-{
-    int r;
-    while (num2 != 0)
-    {
-        r = num1 % num2;
-        num1 = num2;
-        num2 = r;
-    }
-    return num1;
-}
 
 int main()
 {
-    int a = 100, b = 600, plus = 100;
-    while (true)
-    {
-        if ((a * b == 100000) && findGCD(a, b) == 100)
-        {
-            cout << a << " " << b << endl;
-            return 0;
-        }
-        cout << a << " " << b << endl;
+    int n;
+    cout << "\nNhap n = ";
+    cin >> n;
+    int dem;
 
-        a += 100;
-        // b += 100;
+    for (int i = 2; i <= n; i++)
+    {
+        dem = 0;
+        while (n % i == 0)
+        {
+            ++dem;
+            n /= i;
+        }
+        if (dem)
+        {
+            cout << i;
+            if (dem > 1)
+                cout << "^" << dem;
+            if (n > i)
+            {
+                cout << " * ";
+            }
+        }
     }
 }
